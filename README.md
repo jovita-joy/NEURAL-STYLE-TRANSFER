@@ -16,7 +16,7 @@
 
 This project implements **Neural Style Transfer** using PyTorch, allowing you to apply the artistic style of one image to another. It’s based on the seminal paper *"A Neural Algorithm of Artistic Style"* by Gatys et al.
 
----
+
 
 ## 🧠 What is Neural Style Transfer?
 
@@ -26,7 +26,7 @@ Neural Style Transfer (NST) is a deep learning technique that blends two images:
 
 NST generates a new image that maintains the structure of the content image but adopts the style (colors, brushstrokes, textures) of the style image.
 
----
+
 
 ## 📁 Project Structure
 
@@ -35,13 +35,11 @@ NST generates a new image that maintains the structure of the content image but 
 
 
 
----
 
 ## 🛠️ Requirements
 
 Install dependencies using pip:
 
-```bash
 pip install torch torchvision matplotlib pillow
 To use the CPU version of PyTorch (recommended if you don’t have CUDA):
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
