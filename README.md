@@ -74,10 +74,12 @@ PyTorch Documentation
 This project is open-source and available under the MIT License.
 
 CONTENT IMAGE :
+
 ![Image](https://github.com/user-attachments/assets/95851ad3-0e27-4931-8342-b0c266729bb5)
 
 STYLE IMAGE:
 
+![Image](https://github.com/user-attachments/assets/8c16d7a5-9694-4ec7-8ca2-fb33c5412c3f)
 
 OUTPUT
 
