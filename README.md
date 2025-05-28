@@ -28,13 +28,129 @@ NST generates a new image that maintains the structure of the content image but 
 
 
 
-## 📁 Project Structure
+## 📁 Project code
+
+1.Imports and Setup
+
+import os
+
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
+Fixes a common DLL issue on some Windows machines (used with matplotlib or torch).
+
+import torch
+
+import torch.nn as nn
+
+import torch.optim as optim
+
+from torchvision import transforms, models
+
+from PIL import Image
+
+import matplotlib.pyplot as plt
+
+import copy
+
+Loads PyTorch, optimization tools, image transformation tools, and pre-trained models.
+
+2. Device and Image Size Configuration
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+imsize = 512 if torch.cuda.is_available() else 128
+
+3. Image Loader
+
+loader = transforms.Compose([
+    transforms.Resize((imsize, imsize)),
+    transforms.ToTensor()
+])
+
+Defines image transformations: resize and convert to tensor.
+
+def image_loader(image_name):
+
+    image = Image.open(image_name)
+
+    image = loader(image).unsqueeze(0)
+    
+    return image.to(device, torch.float)
+
+Loads and processes an image so it can be passed through a neural network.
+
+4. Display Function
+
+def imshow(tensor, title=None):
+
+Converts tensor back to image and displays it with matplotlib.
+
+5. Image Inputs
+
+content_img = image_loader("content.jpg")
+
+style_img = image_loader("style.jpg")
+
+assert content_img.size() == style_img.size(), "Images must be the same size"
+
+Loads both images and ensures they’re the same size.
+
+6. Loss Functions
+7. 
+a. Content Loss
+
+class ContentLoss(nn.Module):
+    
+Measures the difference between the content of the input image and the content image.
+
+b. Style Loss
+
+def gram_matrix(input): 
+
+class StyleLoss(nn.Module):
+    
+Uses Gram Matrix to capture texture/style, then calculates style loss.
+
+7. VGG19 Model
+
+cnn = models.vgg19(pretrained=True).features.to(device).eval()
+
+Loads a pre-trained VGG19 network and freezes it for feature extraction.
 
 
+class Normalization(nn.Module): 
 
+Normalizes input image using VGG's training data mean and std.
 
+8. Building the Model with Loss Layers
 
+def get_style_model_and_losses(...)
 
+Creates a model that:
+
+Extracts features from specific layers
+
+Adds ContentLoss and StyleLoss at appropriate points
+
+9. Style Transfer Optimization
+
+def run_style_transfer(...)
+
+Optimizes the input image to minimize style + content loss.
+
+Uses the L-BFGS optimizer for better image generation.
+
+Prints loss values every 50 steps for tracking progress.
+
+10. Run and Display Result
+
+input_img = content_img.clone()
+
+output = run_style_transfer(...)
+
+imshow(output, title="Output Image")
+
+Clones the content image as the starting point, runs style transfer, and displays the final result.
 
 ## 🛠️ Requirements
 
