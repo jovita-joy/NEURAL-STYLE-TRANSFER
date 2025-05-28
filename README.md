@@ -1,4 +1,16 @@
 # NEURAL-STYLE-TRANSFER
+"Company":CODTECH IT SOLUTIONS
+
+"NAME": JOVITA JOY
+
+"INTERN ID":CT04DL1217
+
+"DOMAIN":ARTIFICIAL INTELLIGENCE
+
+"DURATION": 4 WEEKS
+
+"MENTOR":Neela Santhosh
+
 
 # 🎨 Neural Style Transfer (NST) in PyTorch
 
@@ -17,4 +29,51 @@ NST generates a new image that maintains the structure of the content image but 
 ---
 
 ## 📁 Project Structure
+
+
+
+
+
+
+---
+
+## 🛠️ Requirements
+
+Install dependencies using pip:
+
+```bash
+pip install torch torchvision matplotlib pillow
+To use the CPU version of PyTorch (recommended if you don’t have CUDA):
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+How to Run
+
+1.Place your content.jpg and style.jpg in the project folder.
+
+2.Run the script:
+
+python NST.py
+
+3.The output will be displayed using matplotlib.
+
+4.The final image is a fusion of the two: the structure of the content with the texture of the style.
+
+Customization
+
+Change the style_weight and content_weight in the script to adjust the intensity of the style.
+
+Modify the image paths to use your own photos.
+
+References
+
+A Neural Algorithm of Artistic Style (Gatys et al.)
+
+PyTorch Documentation
+
+📄 License
+This project is open-source and available under the MIT License.
+
+OUTPUT
+
+
 
