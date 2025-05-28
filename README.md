@@ -41,7 +41,9 @@ NST generates a new image that maintains the structure of the content image but 
 Install dependencies using pip:
 
 pip install torch torchvision matplotlib pillow
+
 To use the CPU version of PyTorch (recommended if you don’t have CUDA):
+
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 How to Run
