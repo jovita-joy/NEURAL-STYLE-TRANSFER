@@ -74,7 +74,7 @@ PyTorch Documentation
 This project is open-source and available under the MIT License.
 
 CONTENT IMAGE :
-
+![Image](https://github.com/user-attachments/assets/95851ad3-0e27-4931-8342-b0c266729bb5)
 
 STYLE IMAGE:
 
