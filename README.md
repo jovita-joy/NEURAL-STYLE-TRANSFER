@@ -31,11 +31,10 @@ NST generates a new image that maintains the structure of the content image but 
 ## 📁 Project code
 
 1.Imports and Setup
-
+```sh
 import os
-
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
-
+```
 Fixes a common DLL issue on some Windows machines (used with matplotlib or torch).
 
 import torch
