@@ -87,7 +87,7 @@ Loads both images and ensures they’re the same size.
 a. Content Loss
 ```sh
 class ContentLoss(nn.Module):
-    ```
+```
 
 Measures the difference between the content of the input image and the content image.
 
@@ -95,7 +95,7 @@ b. Style Loss
 ```sh
 def gram_matrix(input): 
 class StyleLoss(nn.Module):
-    ```
+```
 
 Uses Gram Matrix to capture texture/style, then calculates style loss.
 
@@ -160,20 +160,18 @@ python NST.py
 
 4.The final image is a fusion of the two: the structure of the content with the texture of the style.
 
-Customization
+# Customization
 
 Change the style_weight and content_weight in the script to adjust the intensity of the style.
 
 Modify the image paths to use your own photos.
 
-References
+# References
 
 A Neural Algorithm of Artistic Style (Gatys et al.)
 
 PyTorch Documentation
 
-📄 License
-This project is open-source and available under the MIT License.
 
 CONTENT IMAGE :
 
