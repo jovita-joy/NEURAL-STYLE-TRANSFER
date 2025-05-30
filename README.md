@@ -88,6 +88,7 @@ a. Content Loss
 ```sh
 class ContentLoss(nn.Module):
     ```
+
 Measures the difference between the content of the input image and the content image.
 
 b. Style Loss
@@ -95,6 +96,7 @@ b. Style Loss
 def gram_matrix(input): 
 class StyleLoss(nn.Module):
     ```
+
 Uses Gram Matrix to capture texture/style, then calculates style loss.
 
 7. VGG19 Model
